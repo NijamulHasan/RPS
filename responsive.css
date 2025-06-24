@@ -1,0 +1,73 @@
+@media (max-width: 360px) {
+    body, body * {
+        font-size: 14px !important;
+    
+    }
+    .main_menu, .panal{
+        width: 60% !important;
+        padding: 15px 0 !important;
+    }
+    .main_menu button a, .main_menu button, #highscore a, #highscore .reset_btn{
+        padding: 3px !important;
+    }
+    nav{
+        padding: 5px !important;
+    }
+    #rules buttonm, .links button{
+        width: 30px !important;
+        height: 30px !important;
+    }
+    #rules .box{
+        width: 294px !important;
+    }
+    h2, h1{
+        font-size: 24px !important;
+    }
+    .dropdown{
+        top: 40px !important;
+        right: 5px !important;
+    }
+    .moves_box{
+        width: 340px;
+        color: #fff;
+    }
+    .user, .computer{
+        width: 145px !important;
+        height: 145px !important;
+    }
+    .img_move{
+        width: 130px !important;
+        height: 116px !important;
+    }
+    .VS{
+        width: 50px !important;
+        padding-top: 100px;
+    }
+    .input_box{
+        margin-top: 300px;
+        width: 360px;
+    }
+    .input_box .inp_btn{
+        width: 65px !important;
+        height: 65px !important;
+        border: 2px inset #ffb700 !important;
+        border-radius: 50%;
+        margin: 13px;
+    }
+    .input_box .inp_btn img{
+        width: 80% !important;
+        margin: 10%;
+    }
+    .status{
+        width: 100% !important;
+    }
+    .result_popup{
+        width: 75% !important;
+    }
+    .result_popup table{
+        margin: 15px 0 !important;
+    }
+    .result_popup table th, .result_popup table td{
+        padding: 4px !important;
+    }
+}

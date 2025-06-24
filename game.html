@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- GOOGLE FONTS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <!-- end -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="responsive.css">
+    <link rel="icon" type="image/x-icon" href="Paper.png">
+    <title>Rock Paper Scissor - Game</title>
+</head>
+<body>
+    <div class="result_popup hidden">
+        <h2 class="WINorLOSEorDRAW">Final Result</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th></th>
+                    <th>YOU</th>
+                    <th>COMPUTER</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>WIN</td>
+                    <td>1</td>
+                    <td>3</td>
+                </tr>
+                <tr>
+                    <td>LOSE</td>
+                    <td>2</td>
+                    <td>1</td>
+                </tr>
+                <tr>
+                    <td>DRAW</td>
+                    <td>5</td>
+                    <td>0</td>
+                </tr>
+                <tr>
+                    <td>SCORE</td>
+                    <td>10</td>
+                    <td>11</td>
+                </tr>
+            </tbody>
+        </table>
+        <button><a href="index.html">OK</a></button>
+    </div>
+    <nav>
+        <div class="score">
+            <p class="scr">Score : 0</p>
+        </div>
+        <div class="rounds">
+            <p class="rnd">Round : 1</p>
+        </div>
+        <div class="links">
+            <button><i class="fa-solid fa-bars"></i></button>
+        </div>
+        <div class="dropdown hidden">
+            <ul>
+                <li><button onclick="goToRules('game.html')">Rules</button></li>
+                <hr>
+                <li><a href="index.html">Exit</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div class="moves_box">
+        <div class="user">
+            <div class="img_move img1">
+            </div>
+            <div class="noun">You</div>
+        </div>
+        <div class="VS">
+            <h1>VS</h1>
+        </div>
+        <div class="computer">
+            <div class="img_move img2">
+            </div>
+            <div class="noun">Computer</div>
+        </div>
+    </div>
+    <div class="input_box">
+        <button class="inp_btn i1"><img src="Rock.png" alt="Rock"></button>
+        <button class="inp_btn i2"><img src="Paper.png" alt="Paper"></button>
+        <button class="inp_btn i3"><img src="Scissor.png" alt="Scissor"></button>
+    </div>
+    <div class="status">YOU WIN or LOSE</div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>

@@ -1,0 +1,327 @@
+/*----------Basic Style----------*/
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "Poppins", sans-serif;
+    box-sizing: border-box;
+    text-decoration: none;
+    font-weight: 600;
+}
+html, body {
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    width: 100%;
+}
+
+body{
+    height: 100vh;
+    background-image: linear-gradient(45deg, rgba(38, 21, 12, 0.36) 0%, rgba(38, 21, 12, 0.36) 2%,rgba(145, 27, 35, 0.36) 2%, rgba(145, 27, 35, 0.36) 5%,rgba(65, 22, 18, 0.36) 5%, rgba(65, 22, 18, 0.36) 39%,rgba(11, 19, 6, 0.36) 39%, rgba(11, 19, 6, 0.36) 41%,rgba(172, 28, 41, 0.36) 41%, rgba(172, 28, 41, 0.36) 69%,rgba(118, 25, 29, 0.36) 69%, rgba(118, 25, 29, 0.36) 79%,rgba(199, 30, 47, 0.36) 79%, rgba(199, 30, 47, 0.36) 87%,rgba(92, 24, 24, 0.36) 87%, rgba(92, 24, 24, 0.36) 100%),linear-gradient(45deg, rgba(86, 93, 205, 0.34) 0%, rgba(86, 93, 205, 0.34) 12.5%,rgba(158, 71, 211, 0.34) 12.5%, rgba(158, 71, 211, 0.34) 25%,rgba(110, 86, 207, 0.34) 25%, rgba(110, 86, 207, 0.34) 37.5%,rgba(254, 41, 220, 0.34) 37.5%, rgba(254, 41, 220, 0.34) 50%,rgba(230, 48, 218, 0.34) 50%, rgba(230, 48, 218, 0.34) 62.5%,rgba(182, 63, 214, 0.34) 62.5%, rgba(182, 63, 214, 0.34) 75%,rgba(206, 56, 216, 0.34) 75%, rgba(206, 56, 216, 0.34) 87.5%,rgba(134, 78, 209, 0.34) 87.5%, rgba(134, 78, 209, 0.34) 100%),linear-gradient(177deg, rgb(9, 74, 160),rgb(248, 53, 57));
+}
+ul{
+    list-style: none;
+}
+a:link,a:visited{
+    color: #fff;
+}
+img{
+    width: 100%;
+}
+#index, #highscore, #rules{
+    overflow: hidden;
+}
+
+/*----------Nav Style----------*/
+/*----------Insider of Nav Style----------*/
+
+.result_popup{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 600px;
+    background-image: radial-gradient(circle at center center, transparent,rgb(33,33,33)),repeating-linear-gradient(135deg, rgb(33,33,33) 0px, rgb(33,33,33) 2px,transparent 2px, transparent 10px,rgb(33,33,33) 10px, rgb(33,33,33) 11px,transparent 11px, transparent 21px),repeating-linear-gradient(45deg, rgb(47,47,47) 0px, rgb(47,47,47) 4px,transparent 4px, transparent 8px),linear-gradient(90deg, rgb(33,33,33),rgb(33,33,33));
+    color: #fff;
+    text-align: center;
+    padding: 30px 20px;
+    border-radius: 10px;
+    outline: 4px solid #fff;
+    outline-offset: -8px;
+    z-index: 1;
+}
+.result_popup h2{
+    text-align: center;
+    text-decoration: underline;
+}
+.result_popup table{
+    width: 100%;
+}
+.result_popup table th, .result_popup table td{
+    padding: 10px;
+}
+.result_popup table tbody tr:nth-child(1){
+    color: #21b400;
+}
+.result_popup table tbody tr:nth-child(2){
+    color: #f64646;
+}
+.result_popup table tbody tr:nth-child(3){
+    color: #4284ff;
+}
+.result_popup table tbody tr:nth-child(4){
+    color: #ffcc00;
+}
+.result_popup button{
+    margin-top: 20px;
+    border: none;
+    outline: 2px solid #fff;
+    outline-offset: -4px;
+    background-image: repeating-linear-gradient(45deg, rgb(80, 80, 80) 0px, rgb(80, 80, 80) 14px,rgb(81, 81, 81) 14px, rgb(81, 81, 81) 28px,rgb(86, 86, 86) 28px, rgb(86, 86, 86) 42px,rgb(83, 83, 83) 42px, rgb(83, 83, 83) 56px,rgb(82, 82, 82) 56px, rgb(82, 82, 82) 70px,rgb(88, 88, 88) 70px, rgb(88, 88, 88) 84px,rgb(85, 85, 85) 84px, rgb(85, 85, 85) 98px,rgb(87, 87, 87) 98px, rgb(87, 87, 87) 112px);
+    border-radius: 5px;
+}
+.result_popup button a{
+    font-weight: 700;   
+    font-size: 18px;
+    padding: 5px 100px;
+    display: inline-block;
+}
+nav{
+    background: #D72A5A;
+    color: #bbffd9;
+    padding: 10px 15px;
+    position: relative;
+}
+nav::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+.score{
+    width: 30%;
+    float: left;
+}
+.rounds{
+    width: 30%;
+    float: left;
+}
+nav p{
+    padding-top: 5px;
+}
+.links{
+    float: right;
+    text-align: right;
+}
+/* same design so i had to put this #rules button selector also */
+.links button, #rules button{
+    width: 35px;
+    height: 35px;
+    border: none;
+    outline: none;
+    background: rgba(0, 0, 0, 0.3);
+    color: #fff;
+    font-weight: 900;
+    border-radius: 50%;
+}
+#rules button{
+    float: right;
+}
+.dropdown{
+    position: absolute;
+    top: 55px;
+    right: 15px;
+    background: rgba(0, 0, 0, 0.5);
+    display: inline-block;
+}
+.dropdown button{
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    padding: 7px 25px;
+    display: block;
+}
+.dropdown a{
+    padding: 7px 25px;
+    display: block;
+}
+.hidden{
+    display: none;
+}
+.visible{
+    display: block;
+}
+/*----------UI Style----------*/
+.moves_box{
+    width: 700px;
+    margin: 40px auto 0;
+}
+.moves_box::after{
+    content: '';
+    display: block;
+    clear: both;
+}
+.user, .computer{
+    background-image: repeating-linear-gradient(135deg, rgba(172, 176, 216,0.08) 0px, rgba(172, 176, 216,0.08) 1px,transparent 1px, transparent 9px),repeating-linear-gradient(45deg, rgba(172, 176, 216,0.08) 0px, rgba(172, 176, 216,0.08) 1px,transparent 1px, transparent 9px),linear-gradient(90deg, rgb(183, 70, 156),rgb(8, 33, 155));
+    width: 250px;
+    padding: 7px;
+    border-radius: 12px;
+    float: left;
+}
+.VS{
+    width: 200px;
+    text-align: center;
+    padding-top: 200px;
+    float: left;
+}
+.img_move{
+    background-image: radial-gradient(circle at center center, rgba(46, 46, 46,0.05) 0%, rgba(46, 46, 46,0.05) 22%,rgba(136, 136, 136,0.05) 22%, rgba(136, 136, 136,0.05) 26%,rgba(106, 106, 106,0.05) 26%, rgba(106, 106, 106,0.05) 66%,rgba(196, 196, 196,0.05) 66%, rgba(196, 196, 196,0.05) 77%,rgba(166, 166, 166,0.05) 77%, rgba(166, 166, 166,0.05) 93%,rgba(76, 76, 76,0.05) 93%, rgba(76, 76, 76,0.05) 100%),radial-gradient(circle at center center, rgb(20,20,20) 0%, rgb(20,20,20) 8%,rgb(20,20,20) 8%, rgb(20,20,20) 46%,rgb(20,20,20) 46%, rgb(20,20,20) 60%,rgb(20,20,20) 60%, rgb(20,20,20) 80%,rgb(20,20,20) 80%, rgb(20,20,20) 82%,rgb(20,20,20) 82%, rgb(20,20,20) 100%); background-size: 43px 43px;
+    width: 236px;
+    height: 236px;
+    border-radius: 10px;
+}
+.visible_rock{
+    background-image: url("Rock.png"), radial-gradient(circle at center center, rgba(46, 46, 46,0.05) 0%, rgba(46, 46, 46,0.05) 22%,rgba(136, 136, 136,0.05) 22%, rgba(136, 136, 136,0.05) 26%,rgba(106, 106, 106,0.05) 26%, rgba(106, 106, 106,0.05) 66%,rgba(196, 196, 196,0.05) 66%, rgba(196, 196, 196,0.05) 77%,rgba(166, 166, 166,0.05) 77%, rgba(166, 166, 166,0.05) 93%,rgba(76, 76, 76,0.05) 93%, rgba(76, 76, 76,0.05) 100%),radial-gradient(circle at center center, rgb(20,20,20) 0%, rgb(20,20,20) 8%,rgb(20,20,20) 8%, rgb(20,20,20) 46%,rgb(20,20,20) 46%, rgb(20,20,20) 60%,rgb(20,20,20) 60%, rgb(20,20,20) 80%,rgb(20,20,20) 80%, rgb(20,20,20) 82%,rgb(20,20,20) 82%, rgb(20,20,20) 100%); background-size: 43px 43px;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.visible_paper{
+    background-image: url("Paper.png"), radial-gradient(circle at center center, rgba(46, 46, 46,0.05) 0%, rgba(46, 46, 46,0.05) 22%,rgba(136, 136, 136,0.05) 22%, rgba(136, 136, 136,0.05) 26%,rgba(106, 106, 106,0.05) 26%, rgba(106, 106, 106,0.05) 66%,rgba(196, 196, 196,0.05) 66%, rgba(196, 196, 196,0.05) 77%,rgba(166, 166, 166,0.05) 77%, rgba(166, 166, 166,0.05) 93%,rgba(76, 76, 76,0.05) 93%, rgba(76, 76, 76,0.05) 100%),radial-gradient(circle at center center, rgb(20,20,20) 0%, rgb(20,20,20) 8%,rgb(20,20,20) 8%, rgb(20,20,20) 46%,rgb(20,20,20) 46%, rgb(20,20,20) 60%,rgb(20,20,20) 60%, rgb(20,20,20) 80%,rgb(20,20,20) 80%, rgb(20,20,20) 82%,rgb(20,20,20) 82%, rgb(20,20,20) 100%); background-size: 43px 43px;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.visible_scissor{
+    background-image: url("Scissor.png"), radial-gradient(circle at center center, rgba(46, 46, 46,0.05) 0%, rgba(46, 46, 46,0.05) 22%,rgba(136, 136, 136,0.05) 22%, rgba(136, 136, 136,0.05) 26%,rgba(106, 106, 106,0.05) 26%, rgba(106, 106, 106,0.05) 66%,rgba(196, 196, 196,0.05) 66%, rgba(196, 196, 196,0.05) 77%,rgba(166, 166, 166,0.05) 77%, rgba(166, 166, 166,0.05) 93%,rgba(76, 76, 76,0.05) 93%, rgba(76, 76, 76,0.05) 100%),radial-gradient(circle at center center, rgb(20,20,20) 0%, rgb(20,20,20) 8%,rgb(20,20,20) 8%, rgb(20,20,20) 46%,rgb(20,20,20) 46%, rgb(20,20,20) 60%,rgb(20,20,20) 60%, rgb(20,20,20) 80%,rgb(20,20,20) 80%, rgb(20,20,20) 82%,rgb(20,20,20) 82%, rgb(20,20,20) 100%); background-size: 43px 43px;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+.noun{
+    text-align: center;
+    font-weight: 700;
+    font-size: 18px;
+    color: #fff;
+}
+/*----------Moves Button-(rock, paper, scissors) Style----------*/
+.input_box{
+    width: 700px;
+    margin: 30px auto 0;
+    text-align: center;
+}
+.input_box .inp_btn{
+    width: 100px;
+    background-image: repeating-linear-gradient(0deg, rgba(0, 0, 0, 0.11) 0px, rgba(0, 0, 0, 0.11) 12px, rgba(1, 1, 1, 0.16) 12px, rgba(1, 1, 1, 0.16) 24px, rgba(0, 0, 0, 0.14) 24px, rgba(0, 0, 0, 0.14) 36px, rgba(0, 0, 0, 0.23) 36px, rgba(0, 0, 0, 0.23) 48px, rgba(0, 0, 0, 0.12) 48px, rgba(0, 0, 0, 0.12) 60px, rgba(1, 1, 1, 0.07) 60px, rgba(1, 1, 1, 0.07) 72px, rgba(0, 0, 0, 0.21) 72px, rgba(0, 0, 0, 0.21) 84px, rgba(0, 0, 0, 0.24) 84px, rgba(0, 0, 0, 0.24) 96px, rgba(1, 1, 1, 0.23) 96px, rgba(1, 1, 1, 0.23) 108px, rgba(1, 1, 1, 0.07) 108px, rgba(1, 1, 1, 0.07) 120px, rgba(0, 0, 0, 0.01) 120px, rgba(0, 0, 0, 0.01) 132px, rgba(1, 1, 1, 0.22) 132px, rgba(1, 1, 1, 0.22) 144px, rgba(1, 1, 1, 0.24) 144px, rgba(1, 1, 1, 0.24) 156px, rgba(0, 0, 0, 0) 156px, rgba(0, 0, 0, 0) 168px, rgba(0, 0, 0, 0.12) 168px, rgba(0, 0, 0, 0.12) 180px), repeating-linear-gradient(90deg, rgba(1, 1, 1, 0.01) 0px, rgba(1, 1, 1, 0.01) 12px, rgba(1, 1, 1, 0.15) 12px, rgba(1, 1, 1, 0.15) 24px, rgba(0, 0, 0, 0.09) 24px, rgba(0, 0, 0, 0.09) 36px, rgba(0, 0, 0, 0.02) 36px, rgba(0, 0, 0, 0.02) 48px, rgba(0, 0, 0, 0.1) 48px, rgba(0, 0, 0, 0.1) 60px, rgba(1, 1, 1, 0.07) 60px, rgba(1, 1, 1, 0.07) 72px, rgba(1, 1, 1, 0.15) 72px, rgba(1, 1, 1, 0.15) 84px, rgba(0, 0, 0, 0.18) 84px, rgba(0, 0, 0, 0.18) 96px, rgba(1, 1, 1, 0.15) 96px, rgba(1, 1, 1, 0.15) 108px, rgba(1, 1, 1, 0.09) 108px, rgba(1, 1, 1, 0.09) 120px, rgba(1, 1, 1, 0.07) 120px, rgba(1, 1, 1, 0.07) 132px, rgba(1, 1, 1, 0.05) 132px, rgba(1, 1, 1, 0.05) 144px, rgba(0, 0, 0, 0.1) 144px, rgba(0, 0, 0, 0.1) 156px, rgba(1, 1, 1, 0.18) 156px, rgba(1, 1, 1, 0.18) 168px), repeating-linear-gradient(45deg, rgba(0, 0, 0, 0.24) 0px, rgba(0, 0, 0, 0.24) 16px, rgba(1, 1, 1, 0.06) 16px, rgba(1, 1, 1, 0.06) 32px, rgba(0, 0, 0, 0.16) 32px, rgba(0, 0, 0, 0.16) 48px, rgba(1, 1, 1, 0) 48px, rgba(1, 1, 1, 0) 64px, rgba(1, 1, 1, 0.12) 64px, rgba(1, 1, 1, 0.12) 80px, rgba(1, 1, 1, 0.22) 80px, rgba(1, 1, 1, 0.22) 96px, rgba(0, 0, 0, 0.24) 96px, rgba(0, 0, 0, 0.24) 112px, rgba(0, 0, 0, 0.25) 112px, rgba(0, 0, 0, 0.25) 128px, rgba(1, 1, 1, 0.12) 128px, rgba(1, 1, 1, 0.12) 144px, rgba(0, 0, 0, 0.18) 144px, rgba(0, 0, 0, 0.18) 160px, rgba(1, 1, 1, 0.03) 160px, rgba(1, 1, 1, 0.03) 176px, rgba(1, 1, 1, 0.1) 176px, rgba(1, 1, 1, 0.1) 192px), repeating-linear-gradient(135deg, rgba(1, 1, 1, 0.18) 0px, rgba(1, 1, 1, 0.18) 3px, rgba(0, 0, 0, 0.09) 3px, rgba(0, 0, 0, 0.09) 6px, rgba(0, 0, 0, 0.08) 6px, rgba(0, 0, 0, 0.08) 9px, rgba(1, 1, 1, 0.05) 9px, rgba(1, 1, 1, 0.05) 12px, rgba(0, 0, 0, 0.01) 12px, rgba(0, 0, 0, 0.01) 15px, rgba(1, 1, 1, 0.12) 15px, rgba(1, 1, 1, 0.12) 18px, rgba(0, 0, 0, 0.05) 18px, rgba(0, 0, 0, 0.05) 21px, rgba(1, 1, 1, 0.16) 21px, rgba(1, 1, 1, 0.16) 24px, rgba(1, 1, 1, 0.07) 24px, rgba(1, 1, 1, 0.07) 27px, rgba(1, 1, 1, 0.23) 27px, rgba(1, 1, 1, 0.23) 30px, rgba(0, 0, 0, 0.2) 30px, rgba(0, 0, 0, 0.2) 33px, rgba(0, 0, 0, 0.18) 33px, rgba(0, 0, 0, 0.18) 36px, rgba(1, 1, 1, 0.12) 36px, rgba(1, 1, 1, 0.12) 39px, rgba(1, 1, 1, 0.13) 39px, rgba(1, 1, 1, 0.13) 42px, rgba(1, 1, 1, 0.2) 42px, rgba(1, 1, 1, 0.2) 45px, rgba(1, 1, 1, 0.18) 45px, rgba(1, 1, 1, 0.18) 48px, rgba(0, 0, 0, 0.2) 48px, rgba(0, 0, 0, 0.2) 51px, rgba(1, 1, 1, 0) 51px, rgba(1, 1, 1, 0) 54px, rgba(0, 0, 0, 0.03) 54px, rgba(0, 0, 0, 0.03) 57px, rgba(1, 1, 1, 0.06) 57px, rgba(1, 1, 1, 0.06) 60px, rgba(1, 1, 1, 0) 60px, rgba(1, 1, 1, 0) 63px, rgba(0, 0, 0, 0.1) 63px, rgba(0, 0, 0, 0.1) 66px, rgba(1, 1, 1, 0.19) 66px, rgba(1, 1, 1, 0.19) 69px), linear-gradient(90deg, rgb(239, 53, 115), rgb(79, 2, 93));
+    margin: 30px;
+    border-radius: 15px;
+    border: 5px outset #ffb700;
+    box-shadow: 5px 5px 5px 0 #000;
+}
+.input_box .inp_btn:hover{
+    box-shadow: 5px 5px 5px 0 #000 inset;
+}
+/*----------Status Style----------*/
+.status{
+    width: 800px;
+    margin: 30px auto 0;
+    border-radius: 15px;
+    color: #fff;
+    text-align: center;
+    padding: 15px;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translate(-50%, 0%);
+}
+.green{
+    background-image: repeating-linear-gradient(-135deg, rgba(0,0,0,0.06),transparent,rgba(0,0,0,0.08),rgba(0,0,0,0.1),rgba(0,0,0,0.1),rgba(0,0,0,0.06),rgba(0,0,0,0.04),transparent,rgba(0,0,0,0.07),rgba(0,0,0,0.06),rgba(0,0,0,0.1) 3px),linear-gradient(90deg, rgb(73, 163, 71),rgb(116, 198, 33));
+}
+.red{
+    background-image: repeating-linear-gradient(-135deg, rgba(0,0,0,0.04) 0px, rgba(0,0,0,0.04) 2px,transparent 2px, transparent 4px),linear-gradient(45deg, rgb(223, 43, 1),rgb(202, 124, 12));
+}
+.blue{
+    background-image: repeating-linear-gradient(-135deg, rgba(255,255,255,0.04) 0px, rgba(255,255,255,0.04) 2px,transparent 2px, transparent 4px),linear-gradient(0deg, rgb(30, 35, 121),rgb(45, 106, 187));
+}
+/*----------main menu or index page style along with the high score panal style----------*/
+.main_menu, .panal{
+    width: 280px;
+    margin: 50px auto;
+    text-align: center;
+    background-image: repeating-linear-gradient(45deg, rgb(223, 142, 17) 0px, rgb(223, 142, 17) 41px,rgb(221, 125, 11) 41px, rgb(221, 125, 11) 102px,rgb(225, 158, 23) 102px, rgb(225, 158, 23) 187px,rgb(227, 175, 29) 187px, rgb(227, 175, 29) 197px,rgb(229, 191, 35) 197px, rgb(229, 191, 35) 211px);
+    border-radius: 20px;
+    border: 4px solid #fff;
+    padding: 30px 0;
+}
+.main_menu h2, .panal h2{
+    text-decoration: underline;
+    color: #000;
+    margin-bottom: 15px;
+    font-weight: 800;
+    font-size: 24px
+}
+.main_menu button, .panal button{
+    width: 70%;
+    background-image: repeating-linear-gradient(135deg, rgb(118, 98, 243) 0px, rgb(118, 98, 243) 46px,rgb(61, 163, 245) 46px, rgb(61, 163, 245) 92px,rgb(107, 111, 244) 92px, rgb(107, 111, 244) 138px,rgb(72, 150, 244) 138px, rgb(72, 150, 244) 184px,rgb(95, 124, 244) 184px, rgb(95, 124, 244) 230px,rgb(49, 176, 245) 230px, rgb(49, 176, 245) 276px,rgb(130, 85, 243) 276px, rgb(130, 85, 243) 322px,rgb(84, 137, 244) 322px, rgb(84, 137, 244) 368px);
+    margin: 10px auto;
+    display: block;
+    border: 5px outset rgba(0, 0, 0, 0.5);
+    outline: 1px solid #000;
+    box-shadow: 3px 3px 3px 0 rgba(0, 0, 0, 0.7);
+    border-radius: 5px;
+}
+.main_menu button:nth-child(4){
+    display: inline-block;
+    margin-top: 0;
+    padding: 10px 0;
+    color: #000;
+    font-weight: 700;
+    font-size: 18px;
+}
+.main_menu button:hover, .panal button:hover{
+    border: 5px inset rgba(0, 0, 0, 0.5);
+    box-shadow: none;
+}
+.main_menu a, .panal a{
+    display: inline-block;
+    width: 100%;
+    height: 100%;
+    padding: 10px 0;
+    color: #000;
+    font-weight: 700;
+    font-size: 18px;
+}
+.panal p{
+    font-weight: 700;
+    font-size: 18px;
+
+}
+
+/* -=-=-=-=-=-=-=- RULES Style code =-=-=-=-=-=-=-*/
+
+#rules{
+    color: #fff;
+    line-height: 1.8;
+}
+#rules .box{
+    width: 400px;
+    margin: auto;
+}
+#rules h1{
+    margin: 20px auto;
+    text-align: center;
+    text-decoration: underline;
+    font-weight: 900;
+}
+#rules p{
+    font-size: 20px;
+    font-weight: 900;
+}
+
+/* -=-=-=-=-=-=-=- RULES and HIGH_SCORE Style code =-=-=-=-=-=-=-*/
+
+#highscore .reset_btn{
+    display: inline-block;
+    padding: 10px 0;
+    color: #000;
+    font-weight: 700;
+    font-size: 18px;
+}
